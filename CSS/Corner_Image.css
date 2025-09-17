@@ -1,0 +1,77 @@
+body {
+	background-color: #030303;
+	background-image: url(../Media/concrete-wall.png);
+	font-family: "Inconsolata" ;
+}
+
+:root {
+	--little-time: .5s;
+	--long-time: 1s;
+	--main-color: #fc2c49;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf');
+    font-weight: 275 900;
+    font-stretch: 50% 200%;
+}
+
+.container_2,
+.container_3 {
+	width: 60%;
+	height: 300px;
+	margin: 50px auto;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0px;
+	place-content: center;
+	position: relative;
+	transition: all .5s;
+}
+
+.container_3 {
+	height: 500px;
+}
+
+.container_2:hover,
+.container_3:hover {
+	gap: 10px;
+}
+
+.container_2 > div,
+.container_3 > div {
+	transition: all 1s;
+	overflow: hidden;
+}
+
+.container_2 > div img, 
+.container_3 > div img {
+	width: 200%;
+	height: 200%;
+}
+
+.container_2 > div:nth-child(2) img,
+.container_3 > div:nth-child(2) img {
+	transform: translate(-50%, 0%);
+}
+
+.container_2 > div:nth-child(3) img,
+.container_3 > div:nth-child(3) img {
+	transform: translate(0%, -50%);
+}
+
+.container_2 > div:nth-child(4) img,
+.container_3 > div:nth-child(4) img {
+	transform: translate(-50%, -50%);
+}
+
+
+
+
